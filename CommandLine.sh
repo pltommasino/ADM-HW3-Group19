@@ -1,10 +1,8 @@
-tsv_path="tsv/"
 
-# Merge all .tsv files into merged_courses.tsv
-# Create a new merged file or clear it if it already exists
+#merging tsv files.
+tsv_path="tsv/"
 > merged_courses.tsv
 
-# Concatenate all .tsv files into one, each file content on a new line
 for file in "$tsv_path"/*.tsv; do
     cat "$file" >> merged_courses.tsv
     # Ensure that each entry ends with a newline
