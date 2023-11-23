@@ -4,11 +4,12 @@
 
 This project was carried out by Group 19 of Algorithmic Methods for Data Mining, consisting of:
 
-| Name and Surname | Email |
+| NAME and SURNAME | EMAIL |
+| --- | --- |
 | Pasquale Luca Tommasino | tommasino.1912107@studenti.uniroma1.it | 
-| Elias Antoun | |
-| Jacopo Orsini | |
-| Umut | |
+| Elias Antoun | - |
+| Jacopo Orsini | - |
+| Umut | - |
 
 
 ### Description of the project
