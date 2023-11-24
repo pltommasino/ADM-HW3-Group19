@@ -60,12 +60,13 @@ The scores are broken down as follows:
 Finally the returned score takes into account all of the functions defined above, assigning weights to each score depending on its importance(description>title>...)
 
 ### 4. Visualizing the most relevant MSc degrees - UMUT
-
+In this part, we firtly used opensource geocoding api 'Geocoder'. By giving college names to API, we get latitude and longitude values for every college and added these values to ranked master degree dataframe. (You can see the last version of the data in the master_ranked_lat_lot.csv). After that, by using folium map library, we put these information on the map with the cost information and save this map as .html file. (university_map.html).
 
 ### 5. BONUS: More complex search engine
 
 
 ### 6. Command Line Question - UMUT
 
+In this section, we merged .tsv files with command line commands as merged_courses.tsv.  After that we did some data exploration as question suggest and print those results on the terminal screen. We saved all these commands into CommandLine.sh file.
 
 ### 7. Algorithmic Question - PASQUALE and JACOPO
