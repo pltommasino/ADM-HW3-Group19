@@ -14,35 +14,32 @@ This project was carried out by Group 19 of Algorithmic Methods for Data Mining,
 
 ### Description of the project
 
-For this homework, there is no provided dataset. We have to build our own. *Description_________* 
+All the points of the project are contained in a single main file called `HW3_main.ipynb`. Within it will be imported functions from `.py` files (specified in this README file)
 
-The project is divided in this points:
+The our project is divided in this points:
 1. Data Collection
 2. Search Engine
 3. Define a new score!
 4. Visualizing the most relevant MSc degrees
-5. BONUS: More complex search engine
 6. Command Line Question
 7. Algorithmic Question
 
 
-### 1. Data Collection - PASQUALE
+### 1. Data Collection
 
 We built our dataset through several steps, and for each step, a dedicated file was created in Python:
 
 1. Get the list of master's degree courses:
-> The purpose of this section is to want to collect the URL associated with each site. For this, we created __`getter.py`__. This Python script create the file `url-courses.txt` whose single line corresponds to the master's URL.
+> The purpose of this section is to want to collect the URL associated with each site. For this, we created __`getter.py`__ for the functions needed for this step. This Python script create the file `url-courses.txt` whose single line corresponds to the master's URL.
 
 2. Crawl master's degree pages:
-> The purpose of this section is to want to do the HTML download of each URL listed before. For this, we created __`crawler.py`__. This Python script create, for each course, an `.html` file, and put it in a specific path in `\html` folder.
+> The purpose of this section is to want to do the HTML download of each URL listed before. For this, we created __`crawler.py`__ for the functions needed for this step. This Python script create, for each course, an `.html` file, and put it in a specific path in `\html\page` folder.
 
 3. Parse downloaded pages:
-> The purpose of this section is to want to read each previously downloaded HTML file, and take the information we need to build the dataset. For this reason we create __`parser.py`__ Python script. For each master's degree, we create a `.tsv` file and only after that, putting these files together, we created the dataset `dataset_courses.csv`
-
-In addition, an extra file __`functioner.py`__ was created. Within it are defined all the functions that were needed for the proper functioning of the files listed earlier
+> The purpose of this section is to want to read each previously downloaded HTML file, and take the information we need to build the dataset. For this reason we create __`parser_1.py`__ Python script for the functions needed for this step. For each master's degree, we create a `.tsv` file and only after that, putting these files together, we created the dataset `dataset_courses.csv`
 
 
-### 2. Search Engine - JACOPO and ELIAS
+### 2. Search Engine
 0. Preprocessing:
 0.0. Preprocessing: Defined a fucntion to tokenize, remove stopwords and punctuation and lemmatize the description column.
 0.1. Fee Standardization: Get currency conversion rates(updated daily) from currency_converter, and detect amounts and currencies from the fees column and convert according to country or currency detected. Note that in this part I tried using forex but it was extremely slow.
@@ -51,9 +48,8 @@ In addition, an extra file __`functioner.py`__ was created. Within it are define
 
 3. Conjunctive query and ranking score: this query represents an evolution of the previous one adding the "similarity" as a new paramenter for the generation of the output. In our case, are printed the top k (with k=10) courses that have the highiest similarity with the query input. This new parameter has been created by implementing the cosine_similarity function, just after the generation of a new invertex index using the tifidf.
 
-   
 
-### 3. Define a new score! - ELIAS
+### 3. Define a new score!
 In this part we worked to define a new more comprehensive scoring function and return the top k matches from the dataset.
 The scores are broken down as follows:
 1- description score similar to what was done in 2.1
@@ -63,17 +59,14 @@ The scores are broken down as follows:
 5- administration score (online or on campus)
 Finally the returned score takes into account all of the functions defined above, assigning weights to each score depending on its importance(description>title>...)
 
-### 4. Visualizing the most relevant MSc degrees - UMUT
+### 4. Visualizing the most relevant MSc degrees
 In this part, we firtly used opensource geocoding api 'Geocoder'. By giving college names to API, we get latitude and longitude values for every college and added these values to ranked master degree dataframe. (You can see the last version of the data in the master_ranked_lat_lot.csv). After that, by using folium map library, we put these information on the map with the cost information and save this map as .html file. (university_map.html).
 
-### 5. BONUS: More complex search engine
-
-
-### 6. Command Line Question - UMUT
+### 6. Command Line Question
 
 In this section, we merged .tsv files with command line commands as merged_courses.tsv.  After that we did some data exploration as question suggest and print those results on the terminal screen. We saved all these commands into CommandLine.sh file.
 
-### 7. Algorithmic Question - PASQUALE and JACOPO
+### 7. Algorithmic Question
 
 Preliminary assumption:
    - We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
