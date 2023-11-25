@@ -7,8 +7,8 @@ This project was carried out by Group 19 of Algorithmic Methods for Data Mining,
 | NAME and SURNAME | EMAIL |
 | --- | --- |
 | Pasquale Luca Tommasino | tommasino.1912107@studenti.uniroma1.it | 
-| Elias Antoun | - | antoun.2128572@studenti.uniroma1.it |
-| Jacopo Orsini | - | 
+| Elias Antoun | antoun.2128572@studenti.uniroma1.it |
+| Jacopo Orsini | orsini.2099929@studenti.unirom1.it |
 | Umut | - |
 
 
@@ -76,19 +76,20 @@ In this section, we merged .tsv files with command line commands as merged_cours
 ### 7. Algorithmic Question - PASQUALE and JACOPO
 
 1. The aim of this question is to perfrom an algorithm that is able to calculate, starting from 3 inputs:
-- d: the number of days of work
-- sumHours: the number of hours of work, in the d days
-- ranges: the d intervals (one for each day of work) with a min of hours of work to a max of ours of work
-
-Is able to calculate a combination of hours worked per each day respecting the input data.
-Preliminary assumption:
-- We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
-- We assume that the largest range of hours can be [0,8], so a day of work can't have more than 8 hours (even without this constratin the algorithm would work as well)
-
-The idea behind our algorithm is the following one:
-1- Given the 3 inputs, the machine calculates all the possible combinations of hours worked each day;
-2- After calcuating all the combinations, all those for which the sum of hours worked for the single range is different from the sum of hours worked are discarded, an example: given d=3, sumHours=5 and ranges: d1 [0,1], [0,2], [1,3], the computer will calculate all the possible combinations of hours of work, for example a combination can be d1=1, d2=1 and d3=3, in this case as long as the sum of these 3 element is exactly equal to sumHours, this combination will be kept; an alternavtive combination could have been: d1=1, d2=1 and d3=2, the sum is different from 5 and this combination will be discared;
-3- If there is a solution "YES" is printed together with the number of hours per each day (if there is more than 1 solution, just a random one is printed among all the right combinations), if there isn't a solution just "NO" is printed.
+   - d: the number of days of work;
+   - sumHours: the number of hours of work, in the d days;
+   - ranges: the d intervals (one for each day of work) with a min of hours of work to a max of hours of work;
+   Is able to calculate a combination of hours worked per each day respecting the input data.
+   Preliminary assumption:
+   - We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
+   - We assume that the largest range of hours can be [0,8], so a day of work can't have more than 8 hours (even without this constratin the algorithm would work as well)
+   The idea behind our algorithm is the following one:
+   1- Given the 3 inputs, the machine calculates all the possible combinations of hours worked each day;
+   2- After calcuating all the combinations, all those for which the sum of hours worked for the single range is different from the sum of hours worked are discarded, an example: given d=3, sumHours=5 and ranges: d1 
+      [0,1], [0,2], [1,3], the computer will calculate all the possible combinations of hours of work, for example a combination can be d1=1, d2=1 and d3=3, in this case as long as the sum of these 3 element is exactly 
+      equal to sumHours, this combination will be kept; an alternavtive combination could have been: d1=1, d2=1 and d3=2, the sum is different from 5 and this combination will be discared;
+   3- If there is a solution "YES" is printed together with the number of hours per each day (if there is more than 1 solution, just a random one is printed among all the right combinations), if there isn't a solution 
+      just "NO" is printed.
 
 2. The 'time complexity' (Big O notation) for our algorithm is $O(n^2)$. This is because the Big O notation goes to analyze the worst case of the algorithm. In our case, the worst case is when the algorithm needs to calculate all possible combinations for our exercise. All the details on the calculation are provided in the main file of this repository.
 
