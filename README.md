@@ -75,15 +75,16 @@ In this section, we merged .tsv files with command line commands as merged_cours
 
 ### 7. Algorithmic Question - PASQUALE and JACOPO
 
+Preliminary assumption:
+   - We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
+   - We assume that the largest range of hours can be [0,8], so a day of work can't have more than 8 hours (even without this constratin the algorithm would work as well)
+
 1. The aim of this question is to perfrom an algorithm that is able to calculate, starting from 3 inputs:
    - d: the number of days of work;
    - sumHours: the number of hours of work, in the d days;
    - ranges: the d intervals (one for each day of work) with a min of hours of work to a max of hours of work;
-   Is able to calculate a combination of hours worked per each day respecting the input data.
-   Preliminary assumption:
-   - We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
-   - We assume that the largest range of hours can be [0,8], so a day of work can't have more than 8 hours (even without this constratin the algorithm would work as well)
-   The idea behind our algorithm is the following one:
+   That is able to calculate a combination of hours worked per each day respecting the input data.
+   The idea behind it is the following one:
    1- Given the 3 inputs, the machine calculates all the possible combinations of hours worked each day;
    2- After calcuating all the combinations, all those for which the sum of hours worked for the single range is different from the sum of hours worked are discarded, an example: given d=3, sumHours=5 and ranges: d1 
       [0,1], [0,2], [1,3], the computer will calculate all the possible combinations of hours of work, for example a combination can be d1=1, d2=1 and d3=3, in this case as long as the sum of these 3 element is exactly 
