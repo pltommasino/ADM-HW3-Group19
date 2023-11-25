@@ -84,6 +84,7 @@ Preliminary assumption:
    - sumHours: the number of hours of work, in the d days;
    - ranges: the d intervals (one for each day of work) with a min of hours of work to a max of hours of work;
    That is able to calculate a combination of hours worked per each day respecting the input data.
+   
    The idea behind it is the following one:
    - Given the 3 inputs, the machine calculates all the possible combinations of hours worked each day;
    - After calcuating all the combinations, all those for which the sum of hours worked for the single range is different from the sum of hours worked are discarded, an example: given d=3, sumHours=5 and ranges: d1
