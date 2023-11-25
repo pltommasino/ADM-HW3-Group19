@@ -83,6 +83,7 @@ Is able to calculate a combination of hours worked per each day respecting the i
 Preliminary assumption:
 - We assume that Leonardo can have 0 hours of work in a day, so cases in which 0 is chosen among the range of hours are allowed
 - We assume that the largest range of hours can be [0,8], so a day of work can't have more than 8 hours (even without this constratin the algorithm would work as well)
+
 The idea behind our algorithm is the following one:
 1 - Given the 3 inputs, the machine calculates all the possible combinations of hours worked each day;
 2 - After calcuating all the combinations, all those for which the sum of hours worked for the single range is different from the sum of hours worked are discarded, an example: given d=3, sumHours=5 and ranges: d1 [0,1], [0,2], [1,3], the computer will calculate all the possible combinations of hours of work, for example a combination can be d1=1, d2=1 and d3=3, in this case as long as the sum of these 3 element is exactly equal to sumHours, this combination will be kept; an alternavtive combination could have been: d1=1, d2=1 and d3=2, the sum is different from 5 and this combination will be discared;
@@ -93,5 +94,3 @@ The idea behind our algorithm is the following one:
 3. The answer given by ChatGPT on the calculation of the Big O notation corresponds to the one we did.
 
 4. We believe that our code is mostly functional according the way we solved it (exlaination in point 1); probably a more optimal solution to this problem does exist, but assuming that we change the structure behind the code itself.
-
-### 7. Algorithmic Question - PASQUALE and JACOPO
